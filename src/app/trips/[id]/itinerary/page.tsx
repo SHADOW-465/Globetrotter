@@ -19,7 +19,6 @@ import {
     MoreVertical,
     GripVertical,
     ChevronLeft,
-    TrendingUp,
     X,
     Loader2,
     TrendingUp
