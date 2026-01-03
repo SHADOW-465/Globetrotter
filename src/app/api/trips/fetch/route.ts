@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
 import { supabase } from "@/lib/supabase";
 
 export async function GET(req: Request) {
@@ -12,17 +11,19 @@ export async function GET(req: Request) {
             return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
         }
 
-        const trips = await prisma.trip.findMany({
-            where: { userId: user.id },
-            include: {
-                stops: {
-                    include: {
-                        activities: true
-                    }
-                }
-            },
-            orderBy: { createdAt: 'desc' }
-        });
+        const { data: trips, error } = await supabase
+            .from('Trip')
+            .select(`
+                *,
+                stops:Stop(
+                    *,
+                    activities:Activity(*)
+                )
+            `)
+            .eq('userId', user.id)
+            .order('createdAt', { ascending: false });
+
+        if (error) throw error;
 
         return NextResponse.json({ trips });
     } catch (error: any) {

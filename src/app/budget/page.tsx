@@ -48,11 +48,7 @@ export default function BudgetPage() {
             </nav>
 
             <main className="max-w-6xl mx-auto px-6 py-12">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
-                >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                     {/* Summary Cards */}
                     <div className="glass-card p-8 border-l-4 border-l-primary relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-4 opacity-5">
@@ -89,7 +85,7 @@ export default function BudgetPage() {
                             Under budget by 12%
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Main Chart Area */}
