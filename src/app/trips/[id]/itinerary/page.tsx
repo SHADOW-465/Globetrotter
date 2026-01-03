@@ -19,9 +19,9 @@ import {
     MoreVertical,
     GripVertical,
     ChevronLeft,
-    TrendingUp,
     X,
-    Loader2
+    Loader2,
+    TrendingUp
 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 
