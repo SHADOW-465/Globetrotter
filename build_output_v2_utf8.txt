@@ -1,0 +1,146 @@
+﻿
+> globetrotter@0.1.0 build
+> next build
+
+node.exe : ΓÜá 
+Warning: Next.js 
+inferred your 
+workspace root, but 
+it may not be 
+correct.
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Users\ROCKSTAR 
+SHOWMIK\AppDa ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (ΓÜá War   
+ ning: Ne...not b    
+e correct.:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+ We detected 
+multiple lockfiles 
+and selected the 
+directory of 
+C:\Users\ROCKSTAR SHO
+WMIK\package-lock.jso
+n as the root 
+directory.
+ To silence this 
+warning, set 
+`turbopack.root` in 
+your Next.js config, 
+or consider removing 
+one of the lockfiles 
+if it's not needed.
+   See https://nextjs
+.org/docs/app/api-ref
+erence/config/next-co
+nfig-js/turbopack#roo
+t-directory for more 
+information.
+ Detected additional 
+lockfiles: 
+   * 
+C:\Users\ROCKSTAR SHO
+WMIK\Documents\Projec
+ts\Globetrotter\packa
+ge-lock.json
+
+Γû▓ Next.js 16.1.1 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 10.9s
+  Running TypeScript ...
+  Collecting page data using 3 workers ...
+Error [PrismaClientCo
+nstructorValidationEr
+ror]: Using engine 
+type "client" 
+requires either 
+"adapter" or 
+"accelerateUrl" to 
+be provided to 
+PrismaClient 
+constructor.
+Read more at https://
+pris.ly/d/client-cons
+tructor
+    at module 
+evaluation 
+(C:\Users\ROCKSTAR SH
+OWMIK\Documents\Proje
+cts\Globetrotter\.nex
+t\server\chunks\[root
+-of-the-server]__032f
+f4b0._.js:1:242)
+    at 
+instantiateModule 
+(C:\Users\ROCKSTAR SH
+OWMIK\Documents\Proje
+cts\Globetrotter\.nex
+t\server\chunks\[turb
+opack]_runtime.js:740
+:9)
+    at getOrInstantia
+teModuleFromParent 
+(C:\Users\ROCKSTAR SH
+OWMIK\Documents\Proje
+cts\Globetrotter\.nex
+t\server\chunks\[turb
+opack]_runtime.js:763
+:12)
+    at 
+Context.esmImport 
+[as i] 
+(C:\Users\ROCKSTAR SH
+OWMIK\Documents\Proje
+cts\Globetrotter\.nex
+t\server\chunks\[turb
+opack]_runtime.js:228
+:20)
+    at module 
+evaluation 
+(C:\Users\ROCKSTAR SH
+OWMIK\Documents\Proje
+cts\Globetrotter\.nex
+t\server\chunks\[root
+-of-the-server]__f892
+2875._.js:1:1268)
+    at 
+instantiateModule 
+(C:\Users\ROCKSTAR SH
+OWMIK\Documents\Proje
+cts\Globetrotter\.nex
+t\server\chunks\[turb
+opack]_runtime.js:740
+:9)
+    at instantiateRun
+timeModule 
+(C:\Users\ROCKSTAR SH
+OWMIK\Documents\Proje
+cts\Globetrotter\.nex
+t\server\chunks\[turb
+opack]_runtime.js:768
+:12)
+
+> Build error 
+occurred
+Error: Failed to 
+collect page data 
+for /api/trips/fetch
+    at ignore-listed 
+frames {
+  type: 'Error'
+}

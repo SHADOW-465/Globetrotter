@@ -7,6 +7,8 @@ import {
     PieChart as PieChartIcon,
     BarChart as BarChartIcon,
     TrendingDown,
+    TrendingUp,
+    CheckCircle2,
     AlertTriangle,
     ArrowUpRight,
     ArrowDownRight,
@@ -15,8 +17,10 @@ import {
     Home,
     Utensils,
     Ticket,
-    ChevronLeft
+    ChevronLeft,
+    Link
 } from 'lucide-react';
+import LinkNext from 'next/link';
 
 const BUDGET_DATA = [
     { name: 'Transport', amount: 850, color: 'bg-primary', icon: Plane, percentage: 35 },
@@ -35,9 +39,9 @@ export default function BudgetPage() {
             {/* Header */}
             <nav className="glass-morphism sticky top-0 z-50 px-6 py-4 flex items-center justify-between border-b border-white/5">
                 <div className="flex items-center gap-4">
-                    <Link href="/dashboard" className="text-slate-400 hover:text-white transition-colors">
+                    <LinkNext href="/dashboard" className="text-slate-400 hover:text-white transition-colors">
                         <ChevronLeft className="w-6 h-6" />
-                    </Link>
+                    </LinkNext>
                     <h1 className="text-xl font-display font-bold">Financial Analytics</h1>
                 </div>
                 <button className="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-primary/20 transition-all">
@@ -230,17 +234,5 @@ export default function BudgetPage() {
                 </div>
             </main>
         </div>
-    );
-}
-
-// Re-using local Link/CheckCircle2 if not global
-function Link({ href, children, className }: any) {
-    return <a href={href} className={className}>{children}</a>;
-}
-function CheckCircle2({ className }: any) {
-    return (
-        <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
     );
 }
