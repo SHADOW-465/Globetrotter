@@ -20,7 +20,8 @@ import {
     GripVertical,
     ChevronLeft,
     X,
-    Loader2
+    Loader2,
+    TrendingUp
 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 

@@ -4,9 +4,10 @@ import { supabase } from "@/lib/supabase";
 
 export async function GET(
     req: Request,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        const { id } = await params;
         const { data: { user } } = await supabase.auth.getUser(
             req.headers.get("Authorization")?.split(" ")[1] || ""
         );
@@ -17,7 +18,7 @@ export async function GET(
 
         const trip = await prisma.trip.findUnique({
             where: {
-                id: params.id,
+                id,
                 userId: user.id
             },
             include: {

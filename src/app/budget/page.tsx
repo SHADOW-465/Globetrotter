@@ -7,6 +7,7 @@ import {
     PieChart as PieChartIcon,
     BarChart as BarChartIcon,
     TrendingDown,
+    TrendingUp,
     AlertTriangle,
     ArrowUpRight,
     ArrowDownRight,
